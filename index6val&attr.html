@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <form class="form-inline my-2">
+                <input type="text" class="form-control mr-2" id="textcontent" placeholder="enter">
+                <div class="custom-control custom-checkbox mr-2">
+                    <input class="custom-control-input" type="checkbox" id="chekcbox1" name="checkbox">
+                    <label class="custom-control-label" for="chekcbox1">chekcbox1</label>
+                </div>
+                <div class="custom-control custom-checkbox mr-2">
+                    <input class="custom-control-input" type="checkbox" id="chekcbox2" name="checkbox">
+                    <label class="custom-control-label" for="chekcbox2">chekcbox2</label>
+                </div>
+                <div class="custom-control custom-checkbox mr-2">
+                    <input class="custom-control-input" type="checkbox" id="chekcbox3" name="checkbox">
+                    <label class="custom-control-label" for="chekcbox3">chekcbox3</label>
+                </div>
+                <div class="custom-control custom-checkbox mr-2">
+                    <input class="custom-control-input" type="radio" id="radio1" name="radio">
+                    <label class="custom-control-label" for="radio1">radio1</label>
+                </div>
+                <div class="custom-control custom-checkbox mr-2">
+                    <input class="custom-control-input" type="radio" id="radio2" name="radio">
+                    <label class="custom-control-label" for="radio2">radio2</label>
+                </div>
+                <div class="custom-control custom-checkbox mr-2">
+                    <input class="custom-control-input" type="radio" id="radio3" name="radio">
+                    <label class="custom-control-label" for="radio3">radio3</label>
+                </div>
+                <!-- 对于 radio 来说，如果 name 属性相同的话，那么只能选一个 -->
+            </form>
+        </div>
+
+        <script type="text/javascript">
+        
+            
+            $('#textcontent').blur(function(){
+                console.log($('#textcontent').val());
+            });
+            /* $(document).keydown(function(event){
+                flag = event.keyCode;
+            });
+            console.log(flag); */
+
+
+        </script>
+
+
+    </body>
+</html>

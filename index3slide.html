@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">
+                <button type="button" class="btn btn-outline-primary" id="slideUpcontent">slideUp</button>
+                <button type="button" class="btn btn-outline-warning" id="slideDowncontent">slideDown</button>
+                <button type="button" class="btn btn-outline-success" id="togglecontent">toggle</button>
+                <div class="divcontent" id="divcontent">hide&show</div>
+            </div>
+        </div>
+        <script>
+            $('#slideUpcontent').click(function(){
+                $('#divcontent').slideUp(1000);
+            });
+            $('#slideDowncontent').click(function(){
+                $('#divcontent').slideDown(1000);
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <ul id="ulcontent" class="ulcontent">
+            <li class="item" id="alink1">alink1</li>
+            <li class="item" id="alink2">alink2</li>
+            <li class="item" id="alink3">alink3</li>
+            <li class="item" id="alink4">alink4</li>
+        </ul>
+        <ul id="example_ul" class="example_ul"></ul>
+
+        <script>
+            //$('#ulcontent').empty();//empty() 是把当前元素的全部子元素给删除了
+            //$('#ulcontent').remove();//remove() 是把当前元素给删了（包括子元素）
+
+            //$('#ulcontent').empty('#alink1');//可以看见，不是把id="alink1"的子元素删了，而是把所有子元素删除了
+            //empty() 参数没意义，直接把子元素给删除了
+
+            //$('#ulcontent').remove('.example_ul');
+
+        
+        </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+            .divcontent{
+                width: 100px;
+                height: 100px;
+                background-color: chartreuse;
+                margin: 20px;
+                padding: 20px;
+                position: relative;
+            }
+        </style>
+    </head>
+    <body>
+        <button type="button" class="btn btn-outline-primary" id="animate">animate</button>
+        <button type="button" class="btn btn-outline-success" id="animateStop">animateStop</button>
+        <div id="div01" class="divcontent">content</div>
+        <script>
+            
+            $('#animate').click(function(){
+                $('#div01').animate({
+                "left":"200px",
+                "top":"300px",
+                "fontSize":"30px"//记住要用字符串
+                },3000);//animate()里的第二个参数是时间，描述执行完这个动画需要多长时间
+                //animate() 里可以添加回调函数，例如 animate({},时间,funciton(){});
+            });
+            
+            $('#animateStop').click(function(){
+                $('#div01').stop();//stop()用于停止动画
+            });
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <div class="divcontent1" id="divcontent1">divcontent1<span id="spancontent1">spancontent1</span></div>
+        <div class="divcontent2" id="divcontent2">divcontent2<span id="spancontent2">spancontent2</span></div>
+
+
+        <script>
+        
+        console.log('text() = '+$('#divcontent1').text());
+        console.log('html() = '+$('#divcontent1').html());
+        //可以看到，text()不会识别标签，而html()会识别标签
+
+        $('#divcontent1').text('123');
+        $('#divcontent2').html('123');
+        //可以看到，他们都会修改内容，注意这里text()也是直接全部修改内容，而不会只修改标签里的内容
+
+        $('#divcontent1').text('<p>i love you</p>');//<p>i love you</p>
+        $('#divcontent2').html('<p>i love you</p>');//i love you
+        //可以看到，标签在text()眼中就是文本，但是html()是会识别标签的
+
+        console.log('text() = '+$('div').text());//<p>i love you</p>i love you
+        console.log('html() = '+$('div').html());//&lt;p&gt;i love you&lt;/p&gt;
+        //可以看见一个很重要的区别：html()只会识别第一个的内容，但是text()会识别所有的内容
+
+
+        </script>
+
+    </body>
+</html>

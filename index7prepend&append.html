@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <ul id="ulcontent" class="ulcontent">
+            <li class="item" id="alink1">alink1</li>
+            <li class="item" id="alink2">alink2</li>
+            <li class="item" id="alink3">alink3</li>
+            <li class="item" id="alink4">alink4</li>
+        </ul>
+
+
+        <script>
+            
+            $('#ulcontent').append('<li>new</li>');//append() 是在当前元素的子元素的最后添加一个元素
+            $('#ulcontent').prepend('<li>new</li>');//prepend() 是在当前元素的子元素的最前面添加一个元素
+
+            $('#ulcontent').before('<p>i love you</p>');//before() 就是在指定元素的前面添加一个元素
+            $('#alink3').before('<p>i love you</p>');
+
+            $('#alink4').before($('<div></div>').html('example_div'));
+            //$('<div></div>') 是创建一个div ,html('example_div') 是在div里写入文本 example_div ,就创建了 <div>example_div</div>
+            //也可以直接 $('<h3>you is my love</h3>') ，这样就创建了一个新的<h3>
+
+            $('#alink4').after($('<h1></h1>').html('you is my love'));//after() 就是在指定元素的后面添加一个元素
+            $('#alink4').after($('<h3>you is my love</h3>'));
+        
+        </script>
+    </body>
+</html>

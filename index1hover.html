@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <form action="https://www.baidu.com/" style="width:300px;margin:100px auto;" id="formcontent">
+                <div class="input-group mb-3">
+           <!-- <div class="input-group mb-3"> -->
+                    <input type="text" class="form-control" placeholder="enter" aria-describedby="btncontent" id="inputcontent">
+               <!-- <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2"> -->
+                    <div class="input-group-append">
+               <!-- <div class="input-group-append"> -->
+                        <!-- <button type="button" class="btn btn-outline-primary" id="btncontent">submit</button> -->
+                        <input type="submit" value="submit" class="btn btn-outline-primary" id="btncontent">
+                    </div>
+                </div>
+                <!-- 记住按钮在前面就用input-group-prepend -->
+                <!-- 按在后面就用input-group-append -->
+            </form>
+            
+        </div>
+
+        <script>
+            console.log($('#btncontent'));
+            $('#formcontent').submit(function(){
+                //val()可以获取input标签的value值
+                if( $('#inputcontent').val() == 'baidu' ){
+                    return(true);
+                }else{
+                    return(false);
+                }
+            });
+        
+        
+        </script>
+    </body>
+</html>

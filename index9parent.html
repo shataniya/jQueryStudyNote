@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <ul id="ulcontent" class="ulcontent">
+            <li class="item" id="alink1">alink1</li>
+            <li class="item" id="alink2">alink2</li>
+            <li class="item" id="alink3">alink3</li>
+            <li class="item" id="alink4">alink4</li>
+        </ul>
+        <ul id="example_ul" class="example_ul"></ul>
+
+
+        <script>
+        
+            //console.log($('#alink1').parent());//parent() 获取当前元素的父标签，或者说父元素
+            //console.log($('#alink1').parents());//parents() 获取当前元素的所有父标签，或者说父元素
+            //console.log($('#alink1').parentsUntil('html'));//parentsUntil() 里面的参数是停止参数（不包括），获取当前元素到停止参数为止的所有父元素
+
+            /*  
+                获取父标签：
+                parent() 获取当前元素的父标签，或者说父元素
+                parents() 获取当前元素的所有父标签，或者说父元素
+                parentsUntil() 里面的参数是停止参数（不包括），获取当前元素到停止参数为止的所有父元素
+             */
+
+            //console.log($('#ulcontent').children());//children() 就是获取当前元素的所有子元素
+            //console.log($('#ulcontent').children('#alink3'));//children() 可以输入参数，可以获取当前元素指定的子元素
+            //console.log($('#ulcontent').children().eq(1));
+            //console.log($('#ulcontent').find('#alink3'));
+
+            //console.log($('#ulcontent').children('.item').eq(2).siblings());//siblings() 获取兄弟标签
+
+            /* 
+                获取兄弟标签：
+                prev() 获取当前元素的上一个兄弟元素
+                prevAll() 获取当前元素之前的所有兄弟元素
+                next()  获取当前元素的下一个兄弟元素
+                nextAll() 获取当前元素之后的所有兄弟元素
+                siblings() 获取当前元素之外的所有兄弟元素
+             */
+
+             //console.log($('#ulcontent').children().filter('#alink2'));//获取 id="alink2" 的标签
+             //filter() 获取同水平，满足指定条件的标签
+
+             //console.log($('#ulcontent').children().not('#alink2'));
+
+
+
+        
+        </script>
+    </body>
+</html>
